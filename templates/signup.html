@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock customcss %}
+
+{% block content %}
+<div class="login">
+    <h1>Login</h1>
+    <form action="method">{% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="login">
+    </form>
+</div>
+{% endblock content %}
