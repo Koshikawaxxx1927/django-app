@@ -118,7 +118,8 @@ USE_TZ = True
 
 STATIC_URL = '/sta/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [str(BASE_DIR / 'static/word_quiz_app_css')]
+STATICFILES_DIRS = [str(BASE_DIR / 'static/word_quiz_app_css'), 
+                    str(BASE_DIR / 'static/word_quiz_app_js')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

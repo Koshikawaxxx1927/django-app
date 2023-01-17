@@ -2,16 +2,30 @@
 {% load static %}
 
 {% block customcss %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'signup.css' %}">
 {% endblock customcss %}
 
 {% block content %}
-<div class="login">
-    <h1>Login</h1>
-    <form action="method">{% csrf_token %}
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="login">
-    </form>
+<div class="container">
+    <div class="login">
+        <h1 class="title">Signup</h1>
+        <form class="user-form" action="method">{% csrf_token %}
+            <label class="form-label" id="username-section" for="username">
+                <div class="form-title" id="username-form-title">Username</div>
+                <input id="username" type="text" name="username" placeholder="Username">
+            </label>
+            <label class="form-label" id="password-section" for="password">
+                <div class="form-title" id="password-form-title">Password</div>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </label>
+            <label class="form-label" id="submit-section" for="submit">
+                <input id="submit" type="submit" value="Signup">
+            </label>
+        </form>
+    </div>
 </div>
 {% endblock content %}
+
+{% block customjs %}
+<script src="{% static 'signup.js' %}"></script>
+{% endblock customjs %}

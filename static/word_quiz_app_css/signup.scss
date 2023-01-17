@@ -1,0 +1,59 @@
+$cBlack: black;
+$cWhite: white;
+
+.title {
+    height: 30px;
+    width: 140px;
+    margin: 0 auto;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.container {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.login {
+    margin-top: 150px;
+    & .user-form {
+        margin-top: 80px;
+        & .form-label {
+            & .form-title {
+                font-size: 30px;
+            }
+            & input {
+                display: block;
+                height: 30px;
+                width: 100%;
+                border-bottom: 1px solid $cWhite;
+                border: none;
+                cursor: pointer;
+                &::placeholder {
+                    font-size: 15px;
+                }
+            }
+            & #submit {
+                width: 60%;
+                height: 60px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 40px;
+                color: $cBlack;
+                background-color: $cWhite;
+                margin: 30px auto;
+                padding: 10px 20px;
+                border: none;
+                border: 2px solid $cBlack;
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover {
+                    color: $cWhite;
+                    background-color: $cBlack;
+                    border: 2px solid $cWhite;
+                }
+            }
+        }
+    }
+}
