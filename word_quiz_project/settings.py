@@ -116,10 +116,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+# Paths of css/js files
 STATIC_URL = '/sta/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [str(BASE_DIR / 'static/word_quiz_app_css'), 
-                    str(BASE_DIR / 'static/word_quiz_app_js')]
+                    str(BASE_DIR / 'static/word_quiz_app_js'),
+                    str(BASE_DIR / 'static/images')]
+
+# Paths of image files
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/medi/'
+
+# Redirect to login view when you don't login
+LOGIN_URL = 'login'
+# LOGIN_REDIRECT_URL = 'list'
+# LOGOUT_REDIRECT_URL = 'login'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

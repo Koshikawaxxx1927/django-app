@@ -5,14 +5,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Toto:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'signup.css' %}">
+<link rel="stylesheet" href="{% static 'login.css' %}">
 {% endblock customcss %}    
 
 {% block content %}
 <div class="bg-img"></div>
 <div class="container">
     <div class="login">
-        <h1 class="title">Signup</h1>
+        <h1 class="title">Login</h1>
         <form class="user-form" method="POST">{% csrf_token %}
             <label class="form-label" id="username-section" for="username">
                 <input id="username" type="text" name="username" placeholder="Username">
@@ -21,15 +21,15 @@
                 <input id="password" type="password" name="password" placeholder="Password">
             </label>
             <label class="form-label" id="submit-section" for="submit">
-                <input id="submit" type="submit" value="Signup">
+                <input id="submit" type="submit" value="Login">
             </label>
         </form>
-        <div class="error-message">{{ message }}</div>
     </div>
+    <div class="error-message">{{ message }}</div>
 </div>
 {% endblock content %}
 
 {% block customjs %}
 <script src="{% static 'TextSplit.js' %}"></script>
-<script src="{% static 'signup.js' %}"></script>
+<script src="{% static 'login.js' %}"></script>
 {% endblock customjs %}
