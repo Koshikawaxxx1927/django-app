@@ -1,0 +1,102 @@
+.font-sm {
+  font-size: 14px;
+}
+@media (min-width: 960px) {
+  .font-sm {
+    font-size: 16px;
+  }
+}
+
+.font-md {
+  font-size: 20px;
+}
+@media (min-width: 960px) {
+  .font-md {
+    font-size: 45px;
+  }
+}
+
+.font-lg, .quizes-set .quiz-set .word {
+  font-size: 30px;
+}
+@media (min-width: 960px) {
+  .font-lg, .quizes-set .quiz-set .word {
+    font-size: 60px;
+  }
+}
+
+.font-xl, .main-title, .list-title {
+  font-size: 60px;
+}
+@media (min-width: 960px) {
+  .font-xl, .main-title, .list-title {
+    font-size: 120px;
+  }
+}
+
+.main-title, .list-title {
+  font-weight: 800;
+  font-family: "Noto Serif Toto", serif;
+}
+
+.container {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.flex-container, .quizes-set .quiz-set {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .flex-container, .quizes-set .quiz-set {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+body {
+  background-image: url("/sta/4557851_s.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.list-title {
+  color: white;
+  padding: 20px 0;
+  width: 220px;
+  margin: 0 auto;
+}
+@media (min-width: 960px) {
+  .list-title {
+    width: 440px;
+  }
+}
+
+.quizes-set .quiz-set .word {
+  display: block;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border: 3px solid white;
+  font-weight: 600;
+  padding-left: 20px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.quizes-set .quiz-set .word:hover {
+  background-color: white;
+  color: black;
+}
+@media (min-width: 960px) {
+  .quizes-set .quiz-set .word {
+    width: 48%;
+    margin-top: 30px;
+  }
+}/*# sourceMappingURL=list.css.map */

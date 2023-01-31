@@ -4,8 +4,15 @@
 {% endblock customcss %}
 
 {% block content %}
-{{ quiz_set.set_name }}
+<div class="quiz-set">
+    {{ quiz_set.set_name }}
+</div>
 {% for item in quiz %}
-{{ item.word }}
+<div class="quiz-word">
+    {{ item.word }}
+</div>
+<div class="quiz-sentence">
+    {{ item.sentence }}
+</div>
 {% endfor %}
 {% endblock content %}

@@ -1,0 +1,13 @@
+@mixin screen-background (
+    $image,
+    $size: cover,
+    $attachment: fixed,
+    $position: center center
+) {
+    background: {
+        image: url($image);
+        size: $size;
+        attachment: $attachment;
+        position: $position;
+    }
+}

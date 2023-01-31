@@ -1,4 +1,4 @@
-@mixin animation(
+@mixin kf-animation(
     $name,
     $duration: 1s,
     $timing-function: ease,
@@ -8,7 +8,7 @@
     $fill-mode: forwards
 ) {
     animation: {
-        name:  $name;
+        name: $name;
         duration: $duration;
         timing-function: $timing-function;
         delay: $delay;

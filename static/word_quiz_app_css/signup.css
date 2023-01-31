@@ -1,3 +1,76 @@
+.font-sm {
+  font-size: 14px;
+}
+@media (min-width: 960px) {
+  .font-sm {
+    font-size: 16px;
+  }
+}
+
+.login .user-form .form-label input::-moz-placeholder {
+  font-size: 20px;
+}
+
+.login .user-form .form-label input:-ms-input-placeholder {
+  font-size: 20px;
+}
+
+.font-md, .login .user-form .form-label input, .login .user-form .form-label input::placeholder {
+  font-size: 20px;
+}
+@media (min-width: 960px) {
+  .login .user-form .form-label input::-moz-placeholder {
+    font-size: 45px;
+  }
+  .login .user-form .form-label input:-ms-input-placeholder {
+    font-size: 45px;
+  }
+  .font-md, .login .user-form .form-label input, .login .user-form .form-label input::placeholder {
+    font-size: 45px;
+  }
+}
+
+.font-lg, .login .user-form .form-label #submit {
+  font-size: 30px;
+}
+@media (min-width: 960px) {
+  .font-lg, .login .user-form .form-label #submit {
+    font-size: 60px;
+  }
+}
+
+.font-xl, .main-title, .login .title .char {
+  font-size: 60px;
+}
+@media (min-width: 960px) {
+  .font-xl, .main-title, .login .title .char {
+    font-size: 120px;
+  }
+}
+
+.main-title, .login .title .char {
+  font-weight: 800;
+  font-family: "Noto Serif Toto", serif;
+}
+
+.container {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 body {
   background-image: url("/sta/sky_00040.jpg");
   background-size: cover;
@@ -5,29 +78,24 @@ body {
   background-position: center center;
 }
 
-.title {
+.login {
+  margin-top: 150px;
+}
+.login .title {
   height: 30px;
-  width: 175px;
+  width: 210px;
   margin: 0 auto;
-  font-size: 50px;
-  font-weight: 800;
-  font-family: "Noto Serif Toto", serif;
 }
 @media (min-width: 960px) {
-  .title {
-    width: 300px;
+  .login .title {
+    width: 410px;
   }
 }
-@media (min-width: 1280px) {
-  .title {
-    width: 420px;
-  }
-}
-.title .char {
+.login .title .char {
   display: inline-block;
-  color: black;
+  color: white;
 }
-.title .char:nth-child(1) {
+.login .title .char:nth-child(1) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -43,7 +111,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(2) {
+.login .title .char:nth-child(2) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -59,7 +127,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(3) {
+.login .title .char:nth-child(3) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -75,7 +143,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(4) {
+.login .title .char:nth-child(4) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -91,7 +159,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(5) {
+.login .title .char:nth-child(5) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -107,7 +175,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(6) {
+.login .title .char:nth-child(6) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -123,7 +191,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(7) {
+.login .title .char:nth-child(7) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -139,7 +207,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(8) {
+.login .title .char:nth-child(8) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -155,7 +223,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(9) {
+.login .title .char:nth-child(9) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -171,7 +239,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.title .char:nth-child(10) {
+.login .title .char:nth-child(10) {
   -webkit-animation-name: kf-jump;
           animation-name: kf-jump;
   -webkit-animation-duration: 5s;
@@ -187,29 +255,6 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
-.container {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-}
-
-.login {
-  margin-top: 150px;
-}
-.login .title .char {
-  color: white;
-}
-@media (min-width: 960px) {
-  .login .title .char {
-    font-size: 80px;
-  }
-}
-@media (min-width: 1280px) {
-  .login .title .char {
-    font-size: 120px;
-  }
-}
 .login .user-form {
   margin-top: 80px;
 }
@@ -223,73 +268,36 @@ body {
     margin-top: 200px;
   }
 }
-.login .user-form .form-label .form-title {
-  color: white;
-  font-size: 30px;
-}
 .login .user-form .form-label input {
   margin: 30px 0;
   background-color: rgb(205, 205, 205);
-  color: black;
   display: block;
   height: 50px;
   width: 100%;
   border-bottom: 1px solid white;
   border: none;
   cursor: pointer;
-  font-size: 20px;
   padding: 10px;
 }
-@media (min-width: 960px) {
-  .login .user-form .form-label input {
-    font-size: 40px;
-    padding: 20px;
-  }
-}
-@media (min-width: 1280px) {
-  .login .user-form .form-label input {
-    font-size: 50px;
-    padding: 30px;
-  }
-}
 .login .user-form .form-label input::-moz-placeholder {
-  font-size: 20px;
   padding: 10px;
 }
 .login .user-form .form-label input:-ms-input-placeholder {
-  font-size: 20px;
   padding: 10px;
 }
 .login .user-form .form-label input::placeholder {
-  font-size: 20px;
   padding: 10px;
 }
 @media (min-width: 960px) {
-  .login .user-form .form-label input::-moz-placeholder {
-    font-size: 40px;
-    padding: 20px;
-  }
-  .login .user-form .form-label input:-ms-input-placeholder {
-    font-size: 40px;
-    padding: 20px;
-  }
-  .login .user-form .form-label input::placeholder {
-    font-size: 40px;
-    padding: 20px;
+  .login .user-form .form-label input {
+    margin: 60px 0;
+    height: 80px;
   }
 }
-@media (min-width: 1280px) {
-  .login .user-form .form-label input::-moz-placeholder {
-    font-size: 50px;
-    padding: 30px;
-  }
-  .login .user-form .form-label input:-ms-input-placeholder {
-    font-size: 50px;
-    padding: 30px;
-  }
-  .login .user-form .form-label input::placeholder {
-    font-size: 50px;
-    padding: 30px;
+@media (min-width: 960px) {
+  .login .user-form .form-label input {
+    margin: 60px 0;
+    height: 100px;
   }
 }
 .login .user-form .form-label #submit {
@@ -297,12 +305,10 @@ body {
   height: 60px;
   line-height: 30px;
   text-align: center;
-  font-size: 30px;
   color: white;
   background-color: rgb(0, 191, 191);
   margin: 30px auto;
   padding: 10px 20px;
-  border: none;
   border: 2px solid rgb(0, 191, 191);
   border-radius: 30px;
   cursor: pointer;
@@ -317,14 +323,12 @@ body {
   .login .user-form .form-label #submit {
     height: 100px;
     border-radius: 60px;
-    font-size: 50px;
   }
 }
 @media (min-width: 960px) {
   .login .user-form .form-label #submit {
     height: 110px;
     border-radius: 60px;
-    font-size: 60px;
   }
 }
 
