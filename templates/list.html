@@ -5,6 +5,29 @@
 <link rel="stylesheet" href="{% static 'list.css' %}">
 {% endblock customcss %}
 
+{% block header %}
+<div class="menu">
+    <div class="menu-button">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+    </div>
+    <div class="menu-options">
+        <ul>
+            <li><a href="#">ログアウト</a></li>
+            <li><a href="#">単語セット追加</a></li>
+            <li><a href="#">単語追加</a></li>
+            <li><a href="{% url 'list' %}">リストに戻る</a></li>
+        </ul>
+        <div class="waves">
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+        </div>
+    </div>
+</div>
+{% endblock header %}
+
 {% block content %}
 <div class="container">
     <div class="list-title">
@@ -23,4 +46,5 @@
 {% endblock content %}
 
 {% block customjs %}
+<script src="{% static 'menu.js' %}"></script>
 {% endblock customjs %}

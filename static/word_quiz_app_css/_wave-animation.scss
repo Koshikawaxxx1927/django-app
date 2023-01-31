@@ -1,0 +1,43 @@
+@use "variables" as *;
+@use "animation" as *;
+@use "mq" as *;
+
+.waves {
+    text-align: center;
+    & .wave {
+        display: inline-block;
+        width: 30px;
+        height: 55px;
+        transform-origin: bottom center;
+        margin: 0 10px;
+        background-color: $cWhite;
+        @include mq(lg) {
+            width: 50px;
+            height: 85px;
+        }
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                @include kf-animation(
+                    $name: kf-waves,
+                    $duration: 3s,
+                    $delay: calc(0.3s * #{$i}),
+                    $iteration-count: infinite
+                );
+            }
+        }
+    }
+}
+@keyframes kf-waves {
+    0%, 51%, 100% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    1%, 50% {
+        opacity: 1;
+        transform: scaleY(0);
+    }
+    25% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
