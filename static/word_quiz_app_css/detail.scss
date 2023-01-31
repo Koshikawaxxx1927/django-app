@@ -44,7 +44,7 @@ body {
             opacity: 1;
         }
         & .quiz-sentence {
-            transform: rotateX(90);
+            transform: rotateX(90deg);
             opacity: 0;
         }
         &:hover {
