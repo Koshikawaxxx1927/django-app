@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
+from .models import QuizModel, QuizSetModel
 
 def signupfunc(request):
     if request.method == 'POST':
@@ -29,4 +30,11 @@ def loginfunc(request):
 
 @login_required
 def listfunc(request):
-    return render(request, 'list.html', {})
+    quiz_set = QuizSetModel.objects.filter(author=request.user).all()
+    return render(request, 'list.html', {'quiz_set': quiz_set})
+
+@login_required
+def detailfunc(request, pk):
+    quiz_set = get_object_or_404(QuizSetModel, pk=pk, author=request.user)
+    quiz = QuizModel.objects.filter(set_name=quiz_set.id, set_name__author=request.user).all()
+    return render(request, 'detail.html', {'quiz_set': quiz_set, 'quiz': quiz})

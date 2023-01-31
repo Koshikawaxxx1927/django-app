@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block customcss %}
+{% endblock customcss %}
+
+{% block content %}
+{{ quiz_set.set_name }}
+{% for item in quiz %}
+{{ item.word }}
+{% endfor %}
+{% endblock content %}

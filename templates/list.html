@@ -5,7 +5,13 @@
 {% endblock customcss %}
 
 {% block content %}
-list
+<div class="container">
+    {% for item in quiz_set %}
+    <section class="quiz">
+        <div class="word">{{ item.set_name }}</div>
+    </section>
+    {% endfor %}
+</div>
 {% endblock content %}
 
 {% block customjs %}
