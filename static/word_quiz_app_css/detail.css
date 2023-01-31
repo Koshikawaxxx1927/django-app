@@ -1,0 +1,123 @@
+.font-sm {
+  font-size: 14px;
+}
+@media (min-width: 960px) {
+  .font-sm {
+    font-size: 16px;
+  }
+}
+
+.font-md {
+  font-size: 20px;
+}
+@media (min-width: 960px) {
+  .font-md {
+    font-size: 45px;
+  }
+}
+
+.font-lg, .quizes-set .one-quiz span {
+  font-size: 30px;
+}
+@media (min-width: 960px) {
+  .font-lg, .quizes-set .one-quiz span {
+    font-size: 60px;
+  }
+}
+
+.font-xl, .main-title, .quiz-set {
+  font-size: 60px;
+}
+@media (min-width: 960px) {
+  .font-xl, .main-title, .quiz-set {
+    font-size: 120px;
+  }
+}
+
+.main-title, .quiz-set {
+  font-weight: 800;
+  font-family: "Noto Serif Toto", serif;
+}
+
+.container {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.flex-container, .quizes-set {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .flex-container, .quizes-set {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+body {
+  background-image: url("/sta/4557851_s.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.quiz-set {
+  color: white;
+  padding: 20px 0;
+  width: 130px;
+  margin: 0 auto;
+}
+@media (min-width: 960px) {
+  .quiz-set {
+    width: 250px;
+  }
+}
+
+.quizes-set {
+  width: 100%;
+}
+.quizes-set .one-quiz {
+  height: 93px;
+  position: relative;
+  display: block;
+  transform-style: preserve-3d;
+  perspective: 300px;
+}
+.quizes-set .one-quiz span {
+  position: absolute;
+  background-color: black;
+  color: white;
+  border: 3px solid white;
+  margin-top: 10px;
+  font-weight: 600;
+  padding-left: 20px;
+  border-radius: 10px;
+  width: 100%;
+  transition: all 0.3s;
+  transform-origin: center center -46.5px;
+}
+.quizes-set .one-quiz .quiz-word {
+  transform: rotateX(0);
+  opacity: 1;
+}
+.quizes-set .one-quiz .quiz-sentence {
+  transform: rotateX(90);
+  opacity: 0;
+}
+.quizes-set .one-quiz:hover .quiz-word {
+  transform: rotateX(-90deg);
+  opacity: 0;
+}
+.quizes-set .one-quiz:hover .quiz-sentence {
+  transform: rotateX(0);
+  opacity: 1;
+}
+@media (min-width: 960px) {
+  .quizes-set .one-quiz {
+    width: 48%;
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=detail.css.map */

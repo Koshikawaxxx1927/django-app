@@ -15,3 +15,20 @@
         flex-wrap: wrap;
     }
 }
+
+// .shown-3d {
+//     transform: rotateX(0);
+//     opacity: 1;
+//     &:hover {
+//         transform: rotateX(-90deg);
+//         opacity: 0;
+//     }
+// }
+// .hidden-3d {
+//     transform: rotateX(90deg);
+//     opacity: 0;
+//     &:hover {
+//         transform: rotateX(0);
+//         opacity: 1;
+//     }
+// }

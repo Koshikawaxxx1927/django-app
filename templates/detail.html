@@ -1,18 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block customcss %}
+<link rel="stylesheet" href="{% static 'detail.css' %}">
 {% endblock customcss %}
 
 {% block content %}
-<div class="quiz-set">
-    {{ quiz_set.set_name }}
+<div class="container">
+    <div class="quiz-set">
+        Quiz
+    </div>
+    <div class="quizes-set">
+        {% for item in quiz %}
+        <div class="one-quiz">
+            <span class="quiz-word">
+                {{ item.word }}
+            </span>
+            <span class="quiz-sentence">
+                {{ item.sentence }}
+            </span>
+        </div>
+        {% endfor %}
+    </div>
 </div>
-{% for item in quiz %}
-<div class="quiz-word">
-    {{ item.word }}
-</div>
-<div class="quiz-sentence">
-    {{ item.sentence }}
-</div>
-{% endfor %}
 {% endblock content %}
