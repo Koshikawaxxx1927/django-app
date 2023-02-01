@@ -1,0 +1,28 @@
+@use "common" as *;
+@use "background" as *;
+@use "mq" as *;
+@use "menu" as *;
+
+body {
+    @include screen-background("/sta/4557851_s.jpg");
+}
+
+form {
+    & .delete-btn {
+        @extend .font-lg;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        display: block;
+        width: 40%;
+        background-color: $cRed;
+        color: $cWhite;
+        border-radius: 5px;
+        border: 1px solid $cWhite;
+        box-shadow: 7px 7px 3px $cBlack;
+        &:hover {
+            background-color: $cDeleteHover;
+        }
+    }
+}

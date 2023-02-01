@@ -1,0 +1,10 @@
+{% extends 'edit.html' %}
+{% load static %}
+
+{% block options %}
+{% for item in quizsets %}
+<a class="word" href="{% url 'edit_quiz' item.pk %}">
+    {{ item.set_name }}
+</a>
+{% endfor %}
+{% endblock options %}

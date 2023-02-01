@@ -1,0 +1,47 @@
+@use "common" as *;
+@use "background" as *;
+@use "mq" as *;
+@use "menu" as *;
+
+body {
+    @include screen-background("/sta/4557851_s.jpg");
+}
+
+.list-title {
+    @extend .main-title;
+    color: $cWhite;
+    padding: 20px 0;
+    width: 115px;
+    margin: 0 auto;
+    @include mq(lg) {
+        width: 230px
+    }
+}
+.quizes-set {
+    & .quiz-set {
+        @extend .flex-container;
+        & .word {
+            display: block;
+            @extend .font-lg;
+            background-color: transparent;
+            color: $cWhite;
+            text-decoration: none;
+            border: 3px solid $cWhite;
+            font-weight: 600;
+            padding-left: 20px;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                background-color: $cWhite;
+                color: $cBlack;
+            }
+            @include mq(lg) {
+                width: 48%;
+                margin-top: 30px;
+            }
+        }
+    } 
+}

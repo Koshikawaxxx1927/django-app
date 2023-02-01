@@ -1,0 +1,8 @@
+@use "common" as *;
+@use "background" as *;
+@use "mq" as *;
+@use "menu" as *;
+
+body {
+    @include screen-background("/sta/4557851_s.jpg");
+}

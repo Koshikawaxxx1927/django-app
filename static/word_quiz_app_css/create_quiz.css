@@ -1,0 +1,243 @@
+.font-sm {
+  font-size: 14px;
+}
+@media (min-width: 960px) {
+  .font-sm {
+    font-size: 16px;
+  }
+}
+
+.font-md {
+  font-size: 20px;
+}
+@media (min-width: 960px) {
+  .font-md {
+    font-size: 45px;
+  }
+}
+
+.font-lg, .menu .menu-options ul li {
+  font-size: 30px;
+}
+@media (min-width: 960px) {
+  .font-lg, .menu .menu-options ul li {
+    font-size: 60px;
+  }
+}
+
+.font-xl, .main-title {
+  font-size: 60px;
+}
+@media (min-width: 960px) {
+  .font-xl, .main-title {
+    font-size: 120px;
+  }
+}
+
+.main-title {
+  font-weight: 800;
+  font-family: "Noto Serif Toto", serif;
+}
+
+.container {
+  position: relative;
+  z-index: 0;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.waves, .menu .menu-options .waves-span {
+  text-align: center;
+}
+.waves .wave, .menu .menu-options .waves-span .wave {
+  display: inline-block;
+  width: 30px;
+  height: 55px;
+  transform-origin: bottom center;
+  margin: 0 10px;
+  background-color: white;
+}
+@media (min-width: 960px) {
+  .waves .wave, .menu .menu-options .waves-span .wave {
+    width: 50px;
+    height: 85px;
+  }
+}
+.waves .wave:nth-child(1), .menu .menu-options .waves-span .wave:nth-child(1) {
+  -webkit-animation-name: kf-waves;
+          animation-name: kf-waves;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: calc(0.3s * 1);
+          animation-delay: calc(0.3s * 1);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.waves .wave:nth-child(2), .menu .menu-options .waves-span .wave:nth-child(2) {
+  -webkit-animation-name: kf-waves;
+          animation-name: kf-waves;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: calc(0.3s * 2);
+          animation-delay: calc(0.3s * 2);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.waves .wave:nth-child(3), .menu .menu-options .waves-span .wave:nth-child(3) {
+  -webkit-animation-name: kf-waves;
+          animation-name: kf-waves;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: calc(0.3s * 3);
+          animation-delay: calc(0.3s * 3);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-waves {
+  0%, 51%, 100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  1%, 50% {
+    opacity: 1;
+    transform: scaleY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes kf-waves {
+  0%, 51%, 100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  1%, 50% {
+    opacity: 1;
+    transform: scaleY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+.menu {
+  position: fixed;
+  z-index: 1;
+  height: 50px;
+  width: 100%;
+}
+.menu .menu-button {
+  transform: translateZ(110px);
+  height: 26px;
+  width: 40px;
+  position: absolute;
+  top: 15px;
+  left: 80%;
+  z-index: 3;
+  cursor: pointer;
+}
+.menu .menu-button .spinner {
+  transition: all 0.3s;
+  width: 100%;
+  height: 6px;
+  margin-bottom: 4px;
+  display: block;
+  background-color: white;
+  z-index: 2;
+}
+.menu .menu-button .spinner:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 960px) {
+  .menu .menu-button {
+    left: 90%;
+    height: 46px;
+    width: 60px;
+  }
+  .menu .menu-button .spinner {
+    height: 10px;
+    margin-bottom: 8px;
+  }
+}
+.menu .menu-options {
+  position: relative;
+  height: 100vh;
+  background-color: rgb(0, 196, 196);
+  transition: all 0.3s;
+  transform: translateX(100%);
+}
+.menu .menu-options ul {
+  margin: 0;
+  padding: 80px 50px;
+}
+.menu .menu-options ul li {
+  list-style: none;
+}
+.menu .menu-options ul li a {
+  text-decoration: none;
+  color: white;
+}
+.menu-open .spinner:nth-child(1) {
+  transform: translateY(10px) rotateZ(45deg);
+}
+.menu-open .spinner:nth-child(2) {
+  transform: scaleX(0);
+}
+.menu-open .spinner:nth-child(3) {
+  transform: translateY(-10px) rotateZ(-45deg);
+}
+@media (min-width: 960px) {
+  .menu-open .spinner:nth-child(1) {
+    transform: translateY(18px) rotateZ(45deg);
+  }
+  .menu-open .spinner:nth-child(2) {
+    transform: scaleX(0);
+  }
+  .menu-open .spinner:nth-child(3) {
+    transform: translateY(-18px) rotateZ(-45deg);
+  }
+}
+.menu-open.menu-options {
+  transform: translateX(0%);
+}
+
+body {
+  background-image: url("/sta/4557851_s.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}/*# sourceMappingURL=create_quiz.css.map */

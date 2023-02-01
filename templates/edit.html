@@ -2,21 +2,19 @@
 {% load static %}
 
 {% block customcss %}
-<link rel="stylesheet" href="{% static 'list.css' %}">
+<link rel="stylesheet" href="{% static 'edit.css' %}">
 {% endblock customcss %}
+
 
 {% block content %}
 <div class="container">
     <div class="list-title">
-        Quiz Set
+        Edit
     </div>
     <div class="quizes-set">
         <section class="quiz-set">
-            {% for item in quiz_set %}
-            <a class="word" href="{% url 'detail' item.pk %}">
-                {{ item.set_name }}
-            </a>
-            {% endfor %}
+            {% block options %}
+            {% endblock options %}
         </section>
     </div>
 </div>
