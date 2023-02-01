@@ -7,4 +7,6 @@
     {{ item.word }}
 </a>
 {% endfor %}
+<a class="delete-btn" href="{% url 'delete_quizset' quiz_set.id %}">Delete</a>
+<a class="create-btn" href="{% url 'create_quiz' %}">Create</a>
 {% endblock options %}

@@ -1,0 +1,24 @@
+{% extends 'menu.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" href="{% static 'menu.css' %}">
+<link rel="stylesheet" href="{% static 'create_quiz.css' %}">
+{% endblock customcss %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="POST">{% csrf_token %}
+        <div>word:<input type="text" name="word"></div>
+        <div>sentence:<input type="text" name="sentence"></div>
+        <div>Quiz Set
+            <select class="select" name="set_name">
+                {% for item in quiz_sets %}
+                <option value="{{ item.id }}">{{ item }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input class="create-btn" type="submit" value="Create">
+    </form>
+</div>
+{% endblock content %}

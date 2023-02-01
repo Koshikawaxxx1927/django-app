@@ -1,0 +1,17 @@
+{% extends 'menu.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" href="{% static 'menu.css' %}">
+<link rel="stylesheet" href="{% static 'create_quiz.css' %}">
+{% endblock customcss %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="POST">{% csrf_token %}
+        <div>Set name:<input type="text" name="set_name"></div>
+        <div><input type="hidden" name="author" value="{{ user.username }}"></div>
+        <input class="create-btn" type="submit" value="Submit">
+    </form>
+</div>
+{% endblock content %}

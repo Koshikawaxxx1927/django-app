@@ -43,5 +43,34 @@ body {
                 margin-top: 30px;
             }
         }
+        & a {
+            display: block;
+            @extend .font-lg;
+            color: $cWhite;
+            text-decoration: none;
+            border: 3px solid $cWhite;
+            font-weight: 600;
+            padding-left: 20px;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 20px;
+            cursor: pointer;
+            @include mq(lg) {
+                width: 48%;
+                margin-top: 30px;
+            }
+        }
+        & .delete-btn {
+            background-color: $cRed;
+            &:hover {
+                background-color: $cDeleteHover;
+            }
+        }
+        & .create-btn {
+            background-color: $cAqua;
+            &:hover {
+                background-color: $cCreateHover;
+            }
+        }
     } 
 }

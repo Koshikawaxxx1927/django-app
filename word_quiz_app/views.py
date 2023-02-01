@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 from .models import QuizModel, QuizSetModel
-from django.views.generic import ListView, DeleteView
+from django.views.generic import ListView, DeleteView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 
@@ -69,4 +69,27 @@ class delete_quiz(LoginRequiredMixin, DeleteView):
     template_name = 'delete_quiz.html'
     login_url = 'login'
     model = QuizModel
+    success_url = reverse_lazy('list')
+
+class delete_quizset(LoginRequiredMixin, DeleteView):
+    template_name = 'delete_quizset.html'
+    login_url = 'login'
+    model = QuizSetModel
+    success_url = reverse_lazy('list')
+
+class create_quiz(LoginRequiredMixin, CreateView):
+    template_name = 'create_quiz.html'
+    login_url = 'login'
+    model = QuizModel
+    fields = ('word', 'sentence', 'set_name')
+    success_url = reverse_lazy('list')
+    def get(self, request):
+        quiz_sets = QuizSetModel.objects.filter(author=request.user).all()
+        return render(request, self.template_name, {'quiz_sets': quiz_sets})
+
+class create_quizset(LoginRequiredMixin, CreateView):
+    template_name = 'create_quizset.html'
+    login_url = 'login'
+    model = QuizSetModel
+    fields = ('set_name', 'author')
     success_url = reverse_lazy('list')

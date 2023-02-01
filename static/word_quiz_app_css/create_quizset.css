@@ -7,11 +7,11 @@
   }
 }
 
-.font-md, form div input, form div select {
+.font-md, form div input {
   font-size: 20px;
 }
 @media (min-width: 960px) {
-  .font-md, form div input, form div select {
+  .font-md, form div input {
     font-size: 45px;
   }
 }
@@ -245,11 +245,6 @@ body {
 form {
   padding-top: 100px;
 }
-@media (min-width: 960px) {
-  form {
-    padding-top: 10px;
-  }
-}
 form div {
   height: 60px;
   color: white;
@@ -269,19 +264,9 @@ form div input {
     margin-top: 100px;
   }
 }
-form div select {
-  display: block;
-  width: 100%;
-  height: 30px;
-}
-@media (min-width: 960px) {
-  form div select {
-    height: 60px;
-  }
-}
 form .create-btn {
   display: block;
-  margin: 50px auto;
+  margin: 0 auto;
   background-color: aqua;
   color: white;
   border-radius: 5px;
@@ -290,9 +275,4 @@ form .create-btn {
 }
 form .create-btn:hover {
   background-color: rgb(117, 255, 255);
-}
-@media (min-width: 960px) {
-  form .create-btn {
-    margin: 150px auto;
-  }
-}/*# sourceMappingURL=create_quiz.css.map */
+}/*# sourceMappingURL=create_quizset.css.map */

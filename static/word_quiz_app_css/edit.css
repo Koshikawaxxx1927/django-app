@@ -16,11 +16,11 @@
   }
 }
 
-.font-lg, .quizes-set .quiz-set .word, .menu .menu-options ul li {
+.font-lg, .quizes-set .quiz-set .word, .quizes-set .quiz-set a, .menu .menu-options ul li {
   font-size: 30px;
 }
 @media (min-width: 960px) {
-  .font-lg, .quizes-set .quiz-set .word, .menu .menu-options ul li {
+  .font-lg, .quizes-set .quiz-set .word, .quizes-set .quiz-set a, .menu .menu-options ul li {
     font-size: 60px;
   }
 }
@@ -277,4 +277,34 @@ body {
     width: 48%;
     margin-top: 30px;
   }
+}
+.quizes-set .quiz-set a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  border: 3px solid white;
+  font-weight: 600;
+  padding-left: 20px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@media (min-width: 960px) {
+  .quizes-set .quiz-set a {
+    width: 48%;
+    margin-top: 30px;
+  }
+}
+.quizes-set .quiz-set .delete-btn {
+  background-color: red;
+}
+.quizes-set .quiz-set .delete-btn:hover {
+  background-color: rgb(255, 64, 64);
+}
+.quizes-set .quiz-set .create-btn {
+  background-color: aqua;
+}
+.quizes-set .quiz-set .create-btn:hover {
+  background-color: rgb(117, 255, 255);
 }/*# sourceMappingURL=edit.css.map */

@@ -9,9 +9,6 @@ body {
 
 form {
     padding-top: 100px;
-    @include mq(lg) {
-        padding-top: 10px;
-    }
     & div {
         @extend .font-lg;
         height: 60px;
@@ -28,20 +25,11 @@ form {
         @include mq(lg) {
             margin-top: 100px;      
         }
-        & select {
-            display: block;
-            width: 100%;
-            height: 30px;
-            @extend .font-md;
-            @include mq(lg) {
-                height: 60px;
-            }
-        }
     }
     & .create-btn {
         @extend .font-lg;
         display: block;
-        margin: 50px auto;
+        margin: 0 auto;
         background-color: $cAqua;
         color: $cWhite;
         border-radius: 5px;
@@ -49,9 +37,6 @@ form {
         box-shadow: 7px 7px 3px $cBlack;
         &:hover {
             background-color: $cCreateHover;
-        }
-        @include mq(lg) {
-            margin: 150px auto;
         }
     }
 }
